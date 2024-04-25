@@ -96,7 +96,7 @@ app.post("/doctors", async (req, res) => {
 });
 
 mongoose
-  .connect("mongodb+srv://empower:empower123@cluster0.xnpx4qj.mongodb.net/", {
+  .connect(process.env.MONGO_SERVER_URL,{
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
